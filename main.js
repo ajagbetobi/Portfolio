@@ -1,10 +1,17 @@
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
+const navItems = document.querySelectorAll("nav-item");
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");
   hamburger.classList.toggle("close");
 });
+
+for (var i = 0; i < navItems.length; i++)
+  navItems[i].addEventListener("click", () => {
+    nav.classList.toggle("open");
+    hamburger.classList.toggle("close");
+  });
 
 const loader = document.querySelector(".preloader");
 const main = document.querySelector(".main");
