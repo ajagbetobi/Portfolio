@@ -7,12 +7,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("close");
 });
 
-for (var i = 0; i < navItems.length; i++)
-  navItems[i].addEventListener("click", () => {
-    nav.classList.toggle("open");
-    hamburger.classList.toggle("close");
-  });
-
 const loader = document.querySelector(".preloader");
 const main = document.querySelector(".main");
 
@@ -22,6 +16,6 @@ function init() {
     loader.style.display = "none";
     main.style.display = "block";
     setTimeout(() => (main.style.opacity = 1), 30);
-  }, 2500);
+  }, 4000);
 }
 init();
